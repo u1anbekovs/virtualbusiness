@@ -7,11 +7,18 @@ import Complete from "./components/complete/Complete";
 import Team from "./components/team/Team";
 import Latest from "./components/latest/Latest";
 import Footer from "./components/footer/Footer";
+import {useState} from "react";
 
 function App() {
+
+    const [darkblue, setDarkblue] = useState(false)
+
     return (
-        <div className="App">
-            <Header/>
+        <div className="App" style={{
+            background: darkblue ? "darkblue" : "#111827"
+        }}>
+
+            <Header darkblue={darkblue} setDarkblue={setDarkblue}/>
             <Virtual/>
             <Service/>
             <Every/>

@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from "./img/Logo.svg"
 
-const Header = () => {
+const Header = ({darkblue, setDarkblue}) => {
+
     return (
         <section>
             <nav className="container">
@@ -36,7 +37,7 @@ const Header = () => {
                                    className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Blog</a>
                             </li>
 
-                            <button type="button"
+                            <button onClick={() => setDarkblue(!darkblue)} type="button"
                                     className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-8 py-2 text-center">Contact
                                 Us
                             </button>
